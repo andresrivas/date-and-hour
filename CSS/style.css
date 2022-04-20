@@ -1,0 +1,36 @@
+body {
+    padding: 35px;
+}
+h1{
+    text-align: center;
+    background-color: black;
+}
+
+
+<style type="text/css">
+    .mifecha2 {
+       border: 1px solid #ddd;
+       padding: 3px;
+       text-align: center;
+       font-family:verdana, arial;
+       font-size: 10pt;
+       overflow: hidden;
+       width: 100%
+    }
+    .mifecha2 .mesano{
+       float: left;
+       padding: 3px;
+       font-weight: bold;
+    }
+    .mifecha2 .dia, .mifecha2 .diaactual{
+       width: 20px;
+       padding: 3px;
+       margin-left: 3px;
+       background-color: rgb(229, 233, 96);
+       float: left;
+    }
+    .mifecha2 .diaactual{
+       background-color: rgb(227, 45, 66);
+       font-weight: bold;
+    }
+

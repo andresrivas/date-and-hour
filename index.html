@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORA Y FECHA</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#"> <strong>PROJECT DATE AND HOURS</strong>  </a>
+        </div>
+      </nav>
+      <br>
+      <br>
+
+    <script>
+        var f=new Date();
+        var ano = f.getFullYear();
+        var mes = f.getMonth();
+        var dia = f.getDate();
+        var estiloDia;
+        var meses = new Array ("January","February","March","April","May","June","July","August","September","October","November","December");
+        var diasSemana = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+        var diasMes = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+        var diaMaximo = diasMes[mes];
+        if (mes == 1 && (((ano % 4 == 0) && (ano % 100 != 0)) || (ano % 400 == 0)))
+           diaMaximo = 29;
+        document.write('<div class="mifecha2">');
+        document.write('<div class="mesano">' + meses[mes] + ' ' + ano + ':</div>');
+
+        for (i=1; i<=diaMaximo; i++){
+           if(i == dia)
+              estiloDia = "diaactual";
+           else
+              estiloDia = "dia";
+           document.write('<div class="' + estiloDia + '">' + i + '</div>');
+        }
+        document.write('</div>');
+        </script>
+        <br>
+        <br>
+
+
+        <script>
+        var meses = new Array ("January","February","March","April","May","June","July","August","September","October","November","December");
+        var diasSemana = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+        var f=new Date();
+        document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+        </script>
+
+
+
+
+
+
+
+</body>
+</html>
